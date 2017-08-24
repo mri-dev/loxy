@@ -223,3 +223,62 @@ body.home .fusion-header-menu-align-center .fusion-main-menu {
   font-weight: 800 !important;
   color: #231f20 !important;
 }
+
+/* line 192, sass/style.scss */
+.contact-block-holder {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  color: #231f20;
+}
+/* line 200, sass/style.scss */
+.contact-block-holder a {
+  color: #231f20;
+}
+/* line 204, sass/style.scss */
+.contact-block-holder .contact {
+  flex-basis: 30%;
+}
+/* line 207, sass/style.scss */
+.contact-block-holder .contact-form {
+  flex-basis: 70%;
+}
+/* line 210, sass/style.scss */
+.contact-block-holder i {
+  color: #c1b49a;
+  width: 25px;
+  text-align: center;
+  vertical-align: middle;
+  font-size: 20px;
+  margin-right: 8px;
+}
+/* line 218, sass/style.scss */
+.contact-block-holder h3, .contact-block-holder h4 {
+  text-align: center;
+  text-transform: uppercase;
+  margin: 0 0 15px 0;
+}
+/* line 224, sass/style.scss */
+.contact-block-holder h3 {
+  color: #c1b49a;
+  font-size: 30px;
+  line-height: 1.2;
+}
+/* line 229, sass/style.scss */
+.contact-block-holder h4 {
+  color: #231f20;
+  font-size: 18px;
+  line-height: 1.2;
+  margin-bottom: 25px;
+}
+/* line 236, sass/style.scss */
+.contact-block-holder .items {
+  font-size: 0.9em;
+}
+/* line 239, sass/style.scss */
+.contact-block-holder .items > div {
+  line-height: 1;
+  margin: 18px 0;
+}
