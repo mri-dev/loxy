@@ -15,10 +15,14 @@ require_once "includes/include.php";
 
 function theme_enqueue_styles() {
     wp_enqueue_style( 'avada-parent-stylesheet', get_template_directory_uri() . '/style.css?' . ( (DEVMODE === true) ? time() : '' )  );
-    wp_enqueue_style( 'app-css', IFROOT . '/assets/css/style.css?t=' . ( (DEVMODE === true) ? time() : '' ) );
     wp_enqueue_script( 'google-maps', '//maps.googleapis.com/maps/api/js?sensor=false&language='.get_locale().'&region=hu&libraries=places&key='.GOOGLE_API_KEY);
 }
 add_action( 'wp_enqueue_scripts', 'theme_enqueue_styles' );
+
+function app_enqueue_styles() {
+    wp_enqueue_style( 'app', IFROOT . '/assets/css/style.css?t=' . ( (DEVMODE === true) ? time() : '' ) );
+}
+add_action( 'wp_enqueue_scripts', 'app_enqueue_styles', 100 );
 
 
 function add_opengraph_doctype( $output ) {

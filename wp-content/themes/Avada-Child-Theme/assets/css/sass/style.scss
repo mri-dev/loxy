@@ -2,13 +2,13 @@
 @import 'settings';
 
 .fusion-header-menu-align-center .fusion-main-menu{
-  background: $color-pr;
+  background: transparentize($color-pr, 0);
 }
 .fusion-header-wrapper{
-  -webkit-box-shadow: inset 0 -50px 0 #f1f1f2;
-  -moz-box-shadow: inset 0 -50px 0 #f1f1f2;
-  box-shadow: inset 0 -50px 0 #f1f1f2;
-  padding-bottom: 25px;
+  -webkit-box-shadow: inset 0 -60px 0 #f1f1f2;
+  -moz-box-shadow: inset 0 -60px 0 #f1f1f2;
+  box-shadow: inset 0 -60px 0 #f1f1f2;
+  padding-bottom: 30px;
 }
 .fusion-main-menu > a,
 .fusion-main-menu .menu-item > a{
@@ -16,7 +16,7 @@
   font-weight: 300;
 }
 .fusion-main-menu > ul > li{
-  padding: 8px 0 !important;
+  padding: 15px 0 !important;
 }
 .fusion-main-menu > ul > li > a{
   padding: 0 12px !important;
@@ -39,6 +39,15 @@ body.home{
     box-shadow: none;
     padding-bottom: 0;
   }
+  .fusion-secondary-main-menu{
+    margin-bottom: -30px;
+  }
+  .fusion-header-menu-align-center .fusion-main-menu{
+    background: transparentize($color-pr, 0.1);
+    -webkit-box-shadow: 0 5px 20px -8px #000000;
+    -moz-box-shadow: 0 5px 20px -8px #000000;
+    box-shadow: 0 5px 20px -8px #000000;
+  }
 }
 
 .fusion-modal h1, .fusion-page-title-bar h1, .fusion-widget-area h1, .post-content h1{
@@ -51,7 +60,7 @@ body.home{
     width: 150px;
     height: 8px;
     left: 50%;
-    bottom: 25px;
+    bottom: 0;
     background: $color-pr;
     position: absolute;
     display: block;
@@ -75,6 +84,68 @@ body.home{
   }
 }
 
+.fusion-title.fusion-sep-none{
+  position: relative;
+}
+
 .fusion-header-tagline{
   font-weight: 400 !important;
+}
+
+.square-btn-big{
+  font-weight: 800 !important;
+  font-family: 'Open Sans' !important;
+}
+.rest-page-width{
+  max-width: $page-width;
+  width: $page-width;
+  margin: 0 auto !important;
+}
+.abs-img-cont{
+  img{
+    margin-top: -60px !important;
+  }
+}
+
+.own-testimonials{
+  margin: 100px 0 40px 0;
+  .testimonial {
+    position: relative !important;
+    border: 1px solid #6d6e70 !important;
+    .testimonial-inner{
+      padding: 30px !important;
+      .testimonial-content{
+        text-align: center !important;
+        font-size: 0.9em !important;
+        color: #3b3b3b !important;
+        padding-top: 60px !important;
+        .testimonial-image{
+          border-bottom: 1px solid #6d6e70 !important;
+          position: absolute !important;
+          left: 50% !important;
+          top: -75px !important;
+          -webkit-transform: translateX(-50%) !important;
+          -moz-transform: translateX(-50%) !important;
+          transform: translateX(-50%) !important;
+          float: none !important;
+          text-align: center !important;
+          -webkit-border-radius: 150px;
+          -moz-border-radius: 150px;
+          border-radius: 150px;
+          margin: 0;
+          overflow: hidden;
+
+          img{
+            border: none !important;
+            padding: 10px !important;
+          }
+        }
+      }
+      .testimonial-client{
+        text-align: center !important;
+        color: $color-pr !important;
+        text-transform: uppercase !important;
+      }
+    }
+  }
 }
