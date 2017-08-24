@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css?family=Crimson+Text:400,700");
 /* PlazaITC */
 @font-face {
   font-family: 'PlazaITC';
@@ -152,7 +153,7 @@ body.home .fusion-header-menu-align-center .fusion-main-menu {
   text-align: center !important;
   font-size: 0.9em !important;
   color: #3b3b3b !important;
-  padding-top: 60px !important;
+  padding-top: 100px !important;
 }
 /* line 122, sass/style.scss */
 .own-testimonials .testimonial .testimonial-inner .testimonial-content .testimonial-image {
@@ -177,8 +178,48 @@ body.home .fusion-header-menu-align-center .fusion-main-menu {
   padding: 10px !important;
 }
 /* line 144, sass/style.scss */
+.own-testimonials .testimonial .testimonial-inner .testimonial-content:before {
+  content: '​‌”';
+  position: absolute;
+  left: 50%;
+  top: 65px;
+  -webkit-transform: translateX(-50%) !important;
+  -moz-transform: translateX(-50%) !important;
+  transform: translateX(-50%) !important;
+  pointer-events: none;
+  font-size: 105px;
+  font-family: 'Crimson Text', serif;
+  font-weight: 700;
+  color: #c1b49a;
+}
+/* line 159, sass/style.scss */
 .own-testimonials .testimonial .testimonial-inner .testimonial-client {
   text-align: center !important;
   color: #c1b49a !important;
   text-transform: uppercase !important;
+}
+
+/* line 168, sass/style.scss */
+.header-contact-holder {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  align-items: center;
+}
+/* line 173, sass/style.scss */
+.header-contact-holder > div {
+  padding-left: 25px;
+  color: #231f20 !important;
+}
+/* line 178, sass/style.scss */
+.header-contact-holder i {
+  color: #c1b49a;
+  font-size: 20px;
+  margin-right: 4px;
+  vertical-align: middle;
+}
+/* line 186, sass/style.scss */
+.header-contact-holder > div.phone, .header-contact-holder > div.phone a {
+  font-weight: 800 !important;
+  color: #231f20 !important;
 }

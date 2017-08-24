@@ -1,6 +1,6 @@
 <?php
 define('PROTOCOL', 'https');
-define('TARGETDOMAIN', 'loxysdoghouse.web-pro.hu');
+define('TARGETDOMAIN', 'loxysdoghouse.ideasandbox.eu');
 define('DOMAIN', $_SERVER['HTTP_HOST']);
 define('IFROOT', str_replace(get_option('siteurl'), '//'.DOMAIN, get_stylesheet_directory_uri()));
 define('DEVMODE', true);
@@ -9,9 +9,13 @@ define('GOOGLE_API_KEY', 'AIzaSyA0Mu8_XYUGo9iXhoenj7HTPBIfS2jDU2E');
 define('LANGKEY','hu');
 define('FB_APP_ID', '');
 define('DEFAULT_LANGUAGE', 'hu_HU');
+define('TD', 'ldh');
 
 // Includes
 require_once "includes/include.php";
+
+$app_settings = new Setup_General_Settings();
+
 
 function theme_enqueue_styles() {
     wp_enqueue_style( 'avada-parent-stylesheet', get_template_directory_uri() . '/style.css?' . ( (DEVMODE === true) ? time() : '' )  );
@@ -87,6 +91,7 @@ function ucid()
 
   return $ucid;
 }
+
 
 function rd_init()
 {
