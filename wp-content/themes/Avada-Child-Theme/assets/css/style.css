@@ -225,6 +225,18 @@ body.home .fusion-header-menu-align-center .fusion-main-menu {
 }
 
 /* line 192, sass/style.scss */
+.text-uppercase {
+  text-transform: uppercase;
+}
+
+/* line 196, sass/style.scss */
+.big-bold-opensans h2 {
+  font-family: 'Open Sans';
+  font-size: 28px !important;
+  font-weight: 800 !important;
+}
+
+/* line 202, sass/style.scss */
 .contact-block-holder {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -233,19 +245,19 @@ body.home .fusion-header-menu-align-center .fusion-main-menu {
   flex-wrap: wrap;
   color: #231f20;
 }
-/* line 200, sass/style.scss */
+/* line 210, sass/style.scss */
 .contact-block-holder a {
   color: #231f20;
 }
-/* line 204, sass/style.scss */
+/* line 214, sass/style.scss */
 .contact-block-holder .contact {
   flex-basis: 30%;
 }
-/* line 207, sass/style.scss */
+/* line 217, sass/style.scss */
 .contact-block-holder .contact-form {
   flex-basis: 70%;
 }
-/* line 210, sass/style.scss */
+/* line 220, sass/style.scss */
 .contact-block-holder i {
   color: #c1b49a;
   width: 25px;
@@ -254,31 +266,111 @@ body.home .fusion-header-menu-align-center .fusion-main-menu {
   font-size: 20px;
   margin-right: 8px;
 }
-/* line 218, sass/style.scss */
+/* line 228, sass/style.scss */
 .contact-block-holder h3, .contact-block-holder h4 {
   text-align: center;
   text-transform: uppercase;
   margin: 0 0 15px 0;
 }
-/* line 224, sass/style.scss */
+/* line 234, sass/style.scss */
 .contact-block-holder h3 {
   color: #c1b49a;
   font-size: 30px;
   line-height: 1.2;
 }
-/* line 229, sass/style.scss */
+/* line 239, sass/style.scss */
 .contact-block-holder h4 {
   color: #231f20;
   font-size: 18px;
   line-height: 1.2;
   margin-bottom: 25px;
 }
-/* line 236, sass/style.scss */
+/* line 246, sass/style.scss */
 .contact-block-holder .items {
   font-size: 0.9em;
 }
-/* line 239, sass/style.scss */
+/* line 249, sass/style.scss */
 .contact-block-holder .items > div {
   line-height: 1;
   margin: 18px 0;
+}
+
+/* line 256, sass/style.scss */
+.kutyafajtak-grid-holder {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  margin: -25px;
+}
+/* line 264, sass/style.scss */
+.kutyafajtak-grid-holder > .item {
+  flex-basis: calc(100%/3);
+}
+/* line 267, sass/style.scss */
+.kutyafajtak-grid-holder > .item > .wrapper {
+  padding: 25px;
+}
+/* line 270, sass/style.scss */
+.kutyafajtak-grid-holder > .item > .wrapper .header {
+  padding: 8px;
+  background: #c1b49a;
+}
+/* line 273, sass/style.scss */
+.kutyafajtak-grid-holder > .item > .wrapper .header h3 {
+  color: white;
+  text-transform: uppercase;
+  text-align: center;
+  margin: 0;
+  line-height: 1.4;
+}
+/* line 282, sass/style.scss */
+.kutyafajtak-grid-holder > .item > .wrapper .image {
+  height: 180px;
+}
+/* line 284, sass/style.scss */
+.kutyafajtak-grid-holder > .item > .wrapper .image .wrapper {
+  overflow: hidden;
+  height: 100%;
+  position: relative;
+}
+/* line 289, sass/style.scss */
+.kutyafajtak-grid-holder > .item > .wrapper .image .wrapper img {
+  width: 100%;
+  max-width: 100%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+/* line 302, sass/style.scss */
+.kutyafajtak-grid-holder > .item > .wrapper .content {
+  margin: 10px 0 0 0;
+  font-size: 0.9em;
+  text-align: justify;
+  color: #3b3b3b;
+  line-height: 1.4;
+}
+/* line 311, sass/style.scss */
+.kutyafajtak-grid-holder > .item.gcol3 {
+  flex-basis: calc(100%/3);
+}
+/* line 314, sass/style.scss */
+.kutyafajtak-grid-holder > .item.gcol2 {
+  flex-basis: calc(100%/2);
+}
+/* line 317, sass/style.scss */
+.kutyafajtak-grid-holder > .item.gcol1 {
+  flex-basis: calc(100%/1);
+}
+/* line 320, sass/style.scss */
+.kutyafajtak-grid-holder > .item.gcol4 {
+  flex-basis: calc(100%/4);
+}
+/* line 323, sass/style.scss */
+.kutyafajtak-grid-holder > .item.gcol5 {
+  flex-basis: calc(100%/5);
 }
