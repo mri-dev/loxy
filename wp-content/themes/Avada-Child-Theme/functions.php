@@ -123,7 +123,8 @@ add_filter('query_vars', 'rd_query_vars');
 */
 function ajax_requests()
 {
-  //$ajax = new AjaxRequests();
+  $ajax = new AjaxRequests();
+  $ajax->contact_form();
 }
 add_action( 'init', 'ajax_requests' );
 

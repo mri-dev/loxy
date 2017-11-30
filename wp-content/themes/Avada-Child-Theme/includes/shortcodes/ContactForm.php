@@ -3,6 +3,8 @@ class ContactFormSC
 {
     const SCTAG = 'contact-form';
 
+    public $avaiable_types = array('ajanlat', 'kapcsolat', 'szallitas');
+
     public function __construct()
     {
         add_action( 'init', array( &$this, 'register_shortcode' ) );
@@ -14,19 +16,34 @@ class ContactFormSC
 
     public function do_shortcode( $attr, $content = null )
     {
-        $output = '<div class="'.self::SCTAG.'-holder">';
+        $button_text = 'Ajánlatot kérek';
+        $whatisit = 'Ajánlatkérés';
 
     	  /* Set up the default arguments. */
         $defaults = apply_filters(
             self::SCTAG.'_defaults',
             array(
-
+              'tipus' => 'kapcsolat',
+              'width' => 100,
+              'szinvalaszto' => false
             )
         );
         /* Parse the arguments. */
         $attr = shortcode_atts( $defaults, $attr );
+        $pass_data = array();
 
-        //$output .= (new ShortcodeTemplates('FooterDesign'))->load_template();
+        if ($attr['tipus'] == 'kapcsolat') {
+          $button_text = 'Üzenet elküldése';
+          $whatisit = 'Kapcsolat üzenet';
+        }
+
+        $pass_data['button_text'] = $button_text;
+        $pass_data['whatisit'] = $whatisit;
+        $pass_data = array_merge($pass_data, $attr);
+
+        $output = '<div class="'.self::SCTAG.'-holder type-of-'.$attr['tipus'].'">';
+
+        $output .= (new ShortcodeTemplates('Ajanlatkero'))->load_template( $pass_data );
         $output .= '</div>';
 
         /* Return the output of the tooltip. */
