@@ -10,6 +10,8 @@ define('LANGKEY','hu');
 define('FB_APP_ID', '');
 define('DEFAULT_LANGUAGE', 'hu_HU');
 define('TD', 'ldh');
+define('CAPTCHA_SITE_KEY', '6LemSzsUAAAAAMo_zYX4_iZrkJflAmCdXqAnUJFv');
+define('CAPTCHA_SECRET_KEY', '6LemSzsUAAAAAB3gw2paRrXodpkS8LsojL73_siW');
 
 // Includes
 require_once "includes/include.php";
@@ -20,6 +22,7 @@ $app_settings = new Setup_General_Settings();
 function theme_enqueue_styles() {
     wp_enqueue_style( 'avada-parent-stylesheet', get_template_directory_uri() . '/style.css?' );
     wp_enqueue_script( 'google-maps', '//maps.googleapis.com/maps/api/js?sensor=false&language='.get_locale().'&region=hu&libraries=places&key='.GOOGLE_API_KEY);
+    wp_enqueue_script( 'recaptcha', '//www.google.com/recaptcha/api.js');
 }
 add_action( 'wp_enqueue_scripts', 'theme_enqueue_styles' );
 

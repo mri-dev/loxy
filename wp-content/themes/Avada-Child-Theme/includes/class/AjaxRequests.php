@@ -38,6 +38,8 @@ class AjaxRequests
     $phone = $_POST['phone'];
     $email = $_POST['email'];
     $uzenet = $_POST['uzenet'];
+    $irsz = $_POST['irsz'];
+    $helyseg = $_POST['helyseg'];
     $contacttype = $_POST['formtype'];
 
     switch ($contacttype) {
@@ -55,6 +57,11 @@ class AjaxRequests
     if(empty($name)) $return['missing_elements'][] = 'name';
     if(empty($email)) $return['missing_elements'][] = 'email';
     if(empty($phone)) $return['missing_elements'][] = 'phone';
+
+    if ($contacttype == 'szallitas') {
+      if(empty($irsz)) $return['missing_elements'][] = 'irsz';
+      if(empty($helyseg)) $return['missing_elements'][] = 'helyseg';
+    }
 
     if(!empty($return['missing_elements'])) {
       $return['error']  = 1;
@@ -112,9 +119,9 @@ class AjaxRequests
       $headers[]  = 'Reply-To: '.$name.' <'.$email.'>';
     }
 
-    /* * /
     $alert = wp_mail( $to, $subject, $message, $headers );
 
+    /* * /
     if (!empty($email)) {
       $headers    = array();
       $headers[]  = 'Reply-To: '.get_option('blogname').' <no-reply@'.TARGETDOMAIN.'>';

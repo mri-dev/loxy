@@ -18,6 +18,18 @@
             <input type="text" id="phone" name="phone" class="form-control" placeholder="Telefon *" value="">
           </div>
         </div>
+        <?php if ($tipus == 'szallitas'): ?>
+        <div class="irsz">
+          <div class="form-input-holder">
+            <input type="number" id="irsz" maxlength="4" name="irsz" class="form-control" placeholder="Irányítószám *" value="">
+          </div>
+        </div>
+        <div class="helyseg">
+          <div class="form-input-holder">
+            <input type="text" id="helyseg" name="helyseg" class="form-control" placeholder="Helységnév *" value="">
+          </div>
+        </div>
+        <?php endif; ?>
         <div class="uzenet">
           <div class="form-input-holder">
             <textarea name="uzenet" id="uzenet" class="form-control" placeholder="Üzenet"></textarea>

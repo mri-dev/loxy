@@ -370,6 +370,9 @@ body.home{
         font-size: 0.8em;
         min-height: 80px;
       }
+      input[type=number]{
+        font-size: 0.8em;
+      }
     }
   }
 
@@ -388,6 +391,16 @@ body.home{
       font-weight: bold;
       margin: 25px 0 0 0;
       font-family: 'Open Sans', sans-serif;
+
+      &.sended{
+        border: 2px solid #2e8643;
+        background: #53af69;
+        color: #ffffff;
+
+        i {
+          color: white;
+        }
+      }
     }
   }
 }

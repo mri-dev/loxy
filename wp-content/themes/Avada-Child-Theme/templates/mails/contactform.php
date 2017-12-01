@@ -8,8 +8,15 @@
 <?php if (isset($phone) && !empty($phone)): ?>
 <div>Telefon: <strong><?php echo $phone; ?></strong></div>
 <?php endif; ?>
+<?php if (isset($irsz) && !empty($irsz)): ?>
+<div>Irányítószám: <strong><?php echo $irsz; ?></strong></div>
+<?php endif; ?>
+<?php if (isset($helyseg) && !empty($helyseg)): ?>
+<div>Helységnév: <strong><?php echo $helyseg; ?></strong></div>
+<?php endif; ?>
+<br>
 <div>Üzenet: <br>
 <strong><?php echo $uzenet; ?></strong></div>
-<br><br>
+<br><br> 
 -------- <br>
 Küldve a(z) <strong><?php echo get_option('blogname'); ?></strong> weboldal kapcsolatfelvételi és ajánlatkérő rendszerével.
