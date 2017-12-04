@@ -128,6 +128,7 @@ function ajax_requests()
 {
   $ajax = new AjaxRequests();
   $ajax->contact_form();
+  $ajax->szinvalaszto();
 }
 add_action( 'init', 'ajax_requests' );
 
@@ -162,3 +163,32 @@ function memory_convert($size)
     $unit=array('b','kb','mb','gb','tb','pb');
     return @round($size/pow(1024,($i=floor(log($size,1024)))),2).' '.$unit[$i];
 }
+
+
+function admpage_szinvalaszto_konfigurator() {
+	add_menu_page( 'Ajánlat színválasztó konfigurátor', 'Színválasztó', 'manage_options', 'szinvalaszto_konfigurator', 'szinvalaszto_konfigurator' );
+}
+add_action( 'admin_menu', 'admpage_szinvalaszto_konfigurator' );
+
+function szinvalaszto_konfigurator() {
+	if ( !current_user_can( 'manage_options' ) )  {
+		wp_die( __( 'You do not have sufficient permissions to access this page.' ) );
+	}
+
+  $content = (new ShortcodeTemplates('adminpage_'.__FUNCTION__))->load_template();
+  echo $content;
+}
+
+function admin_external_scripts( $hook )
+{
+  if ( $hook != 'toplevel_page_szinvalaszto_konfigurator' ) {
+    return;
+  }
+
+  wp_enqueue_style('ang-colorpicker', IFROOT . '/assets/vendors/angular-colorpicker/css/color-picker.min.css' );
+
+  wp_enqueue_script('angularjs', '//cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular.min.js');
+  wp_enqueue_script('ang-colorpicker', IFROOT . '/assets/vendors/angular-colorpicker/js/color-picker.min.js' );
+  wp_enqueue_script('szinvalaszto-ang', IFROOT . '/assets/js/szinvalaszto.ang.js?t=' . ( (DEVMODE === true) ? time() : '' ) );
+}
+add_action( 'admin_enqueue_scripts', 'admin_external_scripts' );

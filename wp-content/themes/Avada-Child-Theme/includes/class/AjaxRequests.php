@@ -19,6 +19,12 @@ class AjaxRequests
     add_action( 'wp_ajax_nopriv_'.__FUNCTION__, array( $this, 'ContactFormRequest'));
   }
 
+  public function szinvalaszto()
+  {
+    add_action( 'wp_ajax_'.__FUNCTION__, array( $this, 'SzinvalasztoRequest'));
+    add_action( 'wp_ajax_nopriv_'.__FUNCTION__, array( $this, 'SzinvalasztoRequest'));
+  }
+
   public function ContactFormRequest()
   {
     extract($_POST);
@@ -141,6 +147,31 @@ class AjaxRequests
     }
 
     echo json_encode($return);
+    die();
+  }
+
+  public function SzinvalasztoRequest()
+  {
+    extract($_POST);
+    $settings = json_decode(stripslashes($_POST['settings']), true);
+
+    $re = array(
+      'error' => 0,
+      'msg' => null,
+      'data' => array()
+    );
+
+    switch  ( $type ) {
+      case 'getSettings':
+        $re['data'] = get_option('ajanlatkero_szinvalaszto_cfg', false);
+      break;
+      case 'saveSettings':
+        update_option('ajanlatkero_szinvalaszto_cfg', $settings);
+        $re['data'] = get_option('ajanlatkero_szinvalaszto_cfg', false);
+      break;
+    }
+
+    echo json_encode($re);
     die();
   }
 

@@ -1,6 +1,9 @@
 <a name="_form"></a>
 <form id="mailsend" action="" method="post">
   <input type="hidden" name="formtype" value="<?=$tipus?>">
+  <?php if ($szinvalaszto): ?>
+    szinvalaszto
+  <?php endif; ?>
   <div class="group-holder requester-holder" style="width: <?=$width?>%;">
       <div class="flxtbl">
         <div class="name">
