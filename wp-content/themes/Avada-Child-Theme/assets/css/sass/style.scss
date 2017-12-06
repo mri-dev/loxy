@@ -543,3 +543,71 @@ body.home{
     }
   }
 }
+
+@media screen and (max-width: 1260px)
+{
+  .fusion-main-menu > ul > li > a, .side-nav li a{
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 1135px)
+{
+  .fusion-main-menu > ul > li > a, .side-nav li a{
+    font-size: 11px;
+  }
+  .fusion-main-menu > ul > li > a{
+    padding: 0 8px !important;
+  }
+}
+@media screen and (max-width: 980px)
+{
+  .fusion-social-links-footer, .fusion-social-networks{
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+  .fusion-social-links-header .fusion-social-networks.boxed-icons a{
+    margin: 0 5px;
+  }
+  .fusion-logo-left.fusion-header-v4 .fusion-logo{
+    text-align: center;
+  }
+  .fusion-header-v4.fusion-mobile-menu-design-modern .fusion-logo .fusion-logo-link{
+    max-width: 100%;
+  }
+  .fusion-mobile-menu-design-modern .fusion-header-tagline{
+    margin: 30px auto 0 auto;
+  }
+  .fusion-sticky-header-wrapper{
+    box-shadow: 0 2px 20px -10px #000000;
+  }
+  .fusion-header-wrapper .fusion-header, .fusion-header-wrapper .fusion-secondary-main-menu{
+    background-color: #f8f8f8;
+  }
+  .contact-block-holder .contact,
+  .contact-block-holder .contact-form{
+    flex-basis: 100%;
+  }
+  .contact-block-holder .items{
+    text-align: center;
+  }
+  .fusion-header-v4.fusion-mobile-menu-design-modern .fusion-mobile-menu-icons {
+    right: -15px;
+    top: -5px;
+  }
+}
+
+@media screen and (max-width: 768px){
+  .header-contact-holder{
+    flex-wrap: wrap;
+    & > div {
+      padding: 5px 0;
+      text-align: center;
+      flex-basis: 100%;
+      font-size: 0.8em;
+    }
+  }
+  .fusion-icon-bars:before{
+    font-size: 28px;
+  }
+}

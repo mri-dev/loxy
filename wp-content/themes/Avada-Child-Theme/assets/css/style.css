@@ -605,3 +605,93 @@ body.home .fusion-header-menu-align-center .fusion-main-menu {
   font-size: 14px;
   transform: translate(-50%, -50%);
 }
+
+@media screen and (max-width: 1260px) {
+  /* line 549, sass/style.scss */
+  .fusion-main-menu > ul > li > a, .side-nav li a {
+    font-size: 12px;
+  }
+}
+@media screen and (max-width: 1135px) {
+  /* line 556, sass/style.scss */
+  .fusion-main-menu > ul > li > a, .side-nav li a {
+    font-size: 11px;
+  }
+
+  /* line 559, sass/style.scss */
+  .fusion-main-menu > ul > li > a {
+    padding: 0 8px !important;
+  }
+}
+@media screen and (max-width: 980px) {
+  /* line 565, sass/style.scss */
+  .fusion-social-links-footer, .fusion-social-networks {
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  /* line 569, sass/style.scss */
+  .fusion-social-links-header .fusion-social-networks.boxed-icons a {
+    margin: 0 5px;
+  }
+
+  /* line 572, sass/style.scss */
+  .fusion-logo-left.fusion-header-v4 .fusion-logo {
+    text-align: center;
+  }
+
+  /* line 575, sass/style.scss */
+  .fusion-header-v4.fusion-mobile-menu-design-modern .fusion-logo .fusion-logo-link {
+    max-width: 100%;
+  }
+
+  /* line 578, sass/style.scss */
+  .fusion-mobile-menu-design-modern .fusion-header-tagline {
+    margin: 30px auto 0 auto;
+  }
+
+  /* line 581, sass/style.scss */
+  .fusion-sticky-header-wrapper {
+    box-shadow: 0 2px 20px -10px black;
+  }
+
+  /* line 584, sass/style.scss */
+  .fusion-header-wrapper .fusion-header, .fusion-header-wrapper .fusion-secondary-main-menu {
+    background-color: #f8f8f8;
+  }
+
+  /* line 588, sass/style.scss */
+  .contact-block-holder .contact,
+  .contact-block-holder .contact-form {
+    flex-basis: 100%;
+  }
+
+  /* line 591, sass/style.scss */
+  .contact-block-holder .items {
+    text-align: center;
+  }
+
+  /* line 594, sass/style.scss */
+  .fusion-header-v4.fusion-mobile-menu-design-modern .fusion-mobile-menu-icons {
+    right: -15px;
+    top: -5px;
+  }
+}
+@media screen and (max-width: 768px) {
+  /* line 601, sass/style.scss */
+  .header-contact-holder {
+    flex-wrap: wrap;
+  }
+  /* line 603, sass/style.scss */
+  .header-contact-holder > div {
+    padding: 5px 0;
+    text-align: center;
+    flex-basis: 100%;
+    font-size: 0.8em;
+  }
+
+  /* line 610, sass/style.scss */
+  .fusion-icon-bars:before {
+    font-size: 28px;
+  }
+}
