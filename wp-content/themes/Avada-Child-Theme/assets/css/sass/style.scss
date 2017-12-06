@@ -404,3 +404,142 @@ body.home{
     }
   }
 }
+
+.flip-gallery{
+  .fusion-flip-box,
+  .flip-box-inner-wrapper,
+  .flip-box-front,
+  .flip-box-front-inner,
+  .flip-box-grafix
+  {
+    height: 100% !important;
+  }
+
+  .flip-box-front-inner{
+    margin: 0 !important;
+  }
+
+  .flip-box-back-inner{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.6em;
+    font-weight: bold;
+    font-family: 'PlazaITC', sans-serif !important;
+  }
+  .flip-box-back{
+    background-color: $color-pr !important;
+  }
+
+  .flip-box-grafix.flip-box-image{
+    img {
+      width: 100% !important;
+    }
+  }
+  .fusion-flip-box-wrapper{
+    padding: 0 !important;
+    .flip-box-inner-wrapper{
+      margin: 0 !important;
+    }
+  }
+  .flip-box-front{
+    padding: 0 !important;
+  }
+  .fusion-flip-box .flip-box-back{
+    height: 100%;
+
+  }
+  .fusion-flip-box .flip-box-grafix{
+    margin: 0 !important;
+  }
+}
+
+.color-selection{
+  .loading-text{
+    text-align: center;
+    font-size: 1.4em;
+    padding: 25px 25px 40px 25px;
+    color: #e46e6e;
+  }
+  .set-group{
+    margin: 20px 0;
+    padding: 20px 0;
+    border-top: 5px solid #ececec;
+
+    h2 {
+      text-align: center;
+      text-transform: uppercase;
+      font-size: 1.4em !important;
+      font-weight: bold !important;
+      color: $color-pr !important;
+    }
+
+    .req-select-msg{
+      color: #fd6767;
+      text-align: center;
+      font-size: 0.9em;
+      font-weight: bold;
+    }
+  }
+  .group_selection{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 0 -20px;
+
+
+    & > div {
+      flex-basis: calc(100%/5);
+      padding: 20px;
+    }
+
+    .cwrapper{
+      height: 120px;
+      position:relative;
+      border-radius: 0 15px 0 15px;
+
+      label{
+        height: 100%;
+        position: absolute;
+        min-height: 100%;
+        width: 100%;
+        cursor: pointer;
+      }
+
+      .name {
+        position: absolute;
+        bottom: 10px;
+        left: 10px;
+        font-size: 0.8em;
+        color: black;
+      }
+    }
+
+    .mod{
+      padding-top: 10px;
+      input[type=radio]{
+        display: none;
+      }
+      input[type=radio] + label{
+        width: 18px;
+        height: 19px;
+        border: 1px solid #d8d8d8;
+        display: block;
+        position: relative;
+      }
+      input[type=radio]:checked + label{
+        &:before{
+          content: "X";
+          position: absolute;
+          left: 50%;
+          top: 50%;
+          font-size: 14px;
+          transform: translate(-50%, -50%);
+        }
+      }
+    }
+  }
+}

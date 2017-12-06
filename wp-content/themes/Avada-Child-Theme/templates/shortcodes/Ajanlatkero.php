@@ -1,8 +1,31 @@
 <a name="_form"></a>
 <form id="mailsend" action="" method="post">
   <input type="hidden" name="formtype" value="<?=$tipus?>">
+  <input type="hidden" name="szinvalaszto" value="<?=($szinvalaszto)?1:0?>">
   <?php if ($szinvalaszto): ?>
-    szinvalaszto
+  <div class="color-selection" ng-app="Szinvalaszto" ng-controller="FormSelector" ng-init="init()">
+    <div ng-show="!loaded" class="loading-text">
+      Színválasztó betöltése folyamatban... <i class="fa fa-spin fa-spinner"></i>
+    </div>
+    <div ng-show="loaded">
+      <div class="set-group" ng-repeat="group in settings_group" ng-show="(settings.groups[group.key].length!=0)">
+        <h2>{{group.title}}</h2>
+        <div class="req-select-msg" id="selreq-colorconfig-{{group.key}}" style="display:none;">
+          Kérjük, hogy válasszon egy színvariációt a listából:
+        </div>
+        <div class="group_selection">
+          <div ng-repeat="color in settings.groups[group.key]">
+            <div class="cwrapper" style="background-color:{{color.value}};">
+              <label for="{{group.key}}_{{color.name}}"><div class="name">{{color.name}}</div></label>
+            </div>
+            <div class="mod">
+              <input type="radio" name="colorconfig[{{group.key}}]" id="{{group.key}}_{{color.name}}" value="{{color.name}}"><label for="{{group.key}}_{{color.name}}"></label>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
   <?php endif; ?>
   <div class="group-holder requester-holder" style="width: <?=$width?>%;">
       <div class="flxtbl">
@@ -83,6 +106,22 @@ function ajanlatkeresKuldes()
             jQuery.each(resp.missing_elements, function(i,e){
               jQuery('#mailsend #'+e).addClass('missing');
             });
+
+            if (resp.missing_elements.indexOf('colorconfig_haz_alap') !== false) {
+              jQuery('#selreq-colorconfig-haz_alap').show();
+            } else {
+              jQuery('#selreq-colorconfig-haz_alap').hide();
+            }
+            if (resp.missing_elements.indexOf('colorconfig_haz_teteje') !== false) {
+              jQuery('#selreq-colorconfig-haz_teteje').show();
+            } else{
+              jQuery('#selreq-colorconfig-haz_teteje').hide();
+            }
+            if (resp.missing_elements.indexOf('colorconfig_haz_hatfal') !== false) {
+              jQuery('#selreq-colorconfig-haz_hatfal').show();
+            } else {
+              jQuery('#selreq-colorconfig-haz_hatfal').hide();
+            }
           }
         }
       }

@@ -14,9 +14,15 @@
 <?php if (isset($helyseg) && !empty($helyseg)): ?>
 <div>Helységnév: <strong><?php echo $helyseg; ?></strong></div>
 <?php endif; ?>
+<?php if ($szinvalaszto): ?>
+  <h3 style="margin: 10px 0 5px 0;">Színválasztó - Kiválasztott konfiguráció:</h3>
+  <div>Ház alap: <strong><?php echo $colorconfig['haz_alap']; ?></strong></div>
+  <div>Ház teteje: <strong><?php echo $colorconfig['haz_teteje']; ?></strong></div>
+  <div>Ház hátfala: <strong><?php echo $colorconfig['haz_hatfal']; ?></strong></div>
+<?php endif; ?>
 <br>
 <div>Üzenet: <br>
 <strong><?php echo $uzenet; ?></strong></div>
-<br><br> 
+<br><br>
 -------- <br>
 Küldve a(z) <strong><?php echo get_option('blogname'); ?></strong> weboldal kapcsolatfelvételi és ajánlatkérő rendszerével.

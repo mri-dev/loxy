@@ -47,10 +47,14 @@ class AjaxRequests
     $irsz = $_POST['irsz'];
     $helyseg = $_POST['helyseg'];
     $contacttype = $_POST['formtype'];
+    $szinvalaszto  = ($_POST['szinvalaszto'] == '1') ? true : false;
 
     switch ($contacttype) {
       case 'ajanlat':
         $contact_type = 'ajánlatkérés';
+        if ($szinvalaszto) {
+          $contact_type = 'színválasztó ' . $contact_type;
+        }
       break;
       case 'kapcsolat':
         $contact_type = 'kapcsolat üzenet';
@@ -64,6 +68,10 @@ class AjaxRequests
     if(empty($email)) $return['missing_elements'][] = 'email';
     if(empty($phone)) $return['missing_elements'][] = 'phone';
 
+    if(empty($colorconfig['haz_hatfal'])) $return['missing_elements'][] = 'colorconfig_haz_hatfal';
+    if(empty($colorconfig['haz_teteje'])) $return['missing_elements'][] = 'colorconfig_haz_teteje';
+    if(empty($colorconfig['haz_alap'])) $return['missing_elements'][] = 'colorconfig_haz_alap';
+
     if ($contacttype == 'szallitas') {
       if(empty($irsz)) $return['missing_elements'][] = 'irsz';
       if(empty($helyseg)) $return['missing_elements'][] = 'helyseg';
@@ -72,6 +80,15 @@ class AjaxRequests
     if(!empty($return['missing_elements'])) {
       $return['error']  = 1;
       $return['msg']    =  __('Kérjük, hogy töltse ki az összes mezőt az üzenet küldéséhez.',  'Avada');
+
+      if (
+        in_array('colorconfig_haz_alap', $return['missing_elements']) ||
+        in_array('colorconfig_haz_teteje', $return['missing_elements']) ||
+        in_array('colorconfig_haz_alap', $return['missing_elements'])
+      ) {
+        $return['msg']    .= '<br>' . __('A színvariációknál válasszon ki idomonként egy színvariációt az ajánlatkérés elküldéséhez.',  'Avada');
+      }
+
       $return['missing']= count($return['missing_elements']);
       $this->returnJSON($return);
     }

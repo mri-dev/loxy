@@ -464,3 +464,144 @@ body.home .fusion-header-menu-align-center .fusion-main-menu {
 .contact-form-holder .btns button.sended i {
   color: white;
 }
+
+/* line 414, sass/style.scss */
+.flip-gallery .fusion-flip-box,
+.flip-gallery .flip-box-inner-wrapper,
+.flip-gallery .flip-box-front,
+.flip-gallery .flip-box-front-inner,
+.flip-gallery .flip-box-grafix {
+  height: 100% !important;
+}
+/* line 418, sass/style.scss */
+.flip-gallery .flip-box-front-inner {
+  margin: 0 !important;
+}
+/* line 422, sass/style.scss */
+.flip-gallery .flip-box-back-inner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1.6em;
+  font-weight: bold;
+  font-family: 'PlazaITC', sans-serif !important;
+}
+/* line 431, sass/style.scss */
+.flip-gallery .flip-box-back {
+  background-color: #c1b49a !important;
+}
+/* line 436, sass/style.scss */
+.flip-gallery .flip-box-grafix.flip-box-image img {
+  width: 100% !important;
+}
+/* line 440, sass/style.scss */
+.flip-gallery .fusion-flip-box-wrapper {
+  padding: 0 !important;
+}
+/* line 442, sass/style.scss */
+.flip-gallery .fusion-flip-box-wrapper .flip-box-inner-wrapper {
+  margin: 0 !important;
+}
+/* line 446, sass/style.scss */
+.flip-gallery .flip-box-front {
+  padding: 0 !important;
+}
+/* line 449, sass/style.scss */
+.flip-gallery .fusion-flip-box .flip-box-back {
+  height: 100%;
+}
+/* line 453, sass/style.scss */
+.flip-gallery .fusion-flip-box .flip-box-grafix {
+  margin: 0 !important;
+}
+
+/* line 459, sass/style.scss */
+.color-selection .loading-text {
+  text-align: center;
+  font-size: 1.4em;
+  padding: 25px 25px 40px 25px;
+  color: #e46e6e;
+}
+/* line 465, sass/style.scss */
+.color-selection .set-group {
+  margin: 20px 0;
+  padding: 20px 0;
+  border-top: 5px solid #ececec;
+}
+/* line 470, sass/style.scss */
+.color-selection .set-group h2 {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 1.4em !important;
+  font-weight: bold !important;
+  color: #c1b49a !important;
+}
+/* line 478, sass/style.scss */
+.color-selection .set-group .req-select-msg {
+  color: #fd6767;
+  text-align: center;
+  font-size: 0.9em;
+  font-weight: bold;
+}
+/* line 485, sass/style.scss */
+.color-selection .group_selection {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 0 -20px;
+}
+/* line 494, sass/style.scss */
+.color-selection .group_selection > div {
+  flex-basis: calc(100%/5);
+  padding: 20px;
+}
+/* line 499, sass/style.scss */
+.color-selection .group_selection .cwrapper {
+  height: 120px;
+  position: relative;
+  border-radius: 0 15px 0 15px;
+}
+/* line 504, sass/style.scss */
+.color-selection .group_selection .cwrapper label {
+  height: 100%;
+  position: absolute;
+  min-height: 100%;
+  width: 100%;
+  cursor: pointer;
+}
+/* line 512, sass/style.scss */
+.color-selection .group_selection .cwrapper .name {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  font-size: 0.8em;
+  color: black;
+}
+/* line 521, sass/style.scss */
+.color-selection .group_selection .mod {
+  padding-top: 10px;
+}
+/* line 523, sass/style.scss */
+.color-selection .group_selection .mod input[type=radio] {
+  display: none;
+}
+/* line 526, sass/style.scss */
+.color-selection .group_selection .mod input[type=radio] + label {
+  width: 18px;
+  height: 19px;
+  border: 1px solid #d8d8d8;
+  display: block;
+  position: relative;
+}
+/* line 534, sass/style.scss */
+.color-selection .group_selection .mod input[type=radio]:checked + label:before {
+  content: "X";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  font-size: 14px;
+  transform: translate(-50%, -50%);
+}
