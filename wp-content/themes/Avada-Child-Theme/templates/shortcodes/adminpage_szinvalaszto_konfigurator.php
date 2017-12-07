@@ -2,8 +2,8 @@
   <h1>Ajánlatkérő színválasztó konfigurátor</h1>
 </div>
 <div ng-app="Szinvalaszto" ng-controller="Konfigurator" ng-init="init()">
-  <div ng-show="!loaded">
-    Adatok betöltése folyamatban...
+  <div ng-show="!loaded" style="color: red; margin: 20px 0; font-size: 16px;">
+    Beállítások betöltése folyamatban...
   </div>
   <div ng-show="loaded">
     <div class="settings-group" ng-repeat="sg in settings_group">
@@ -33,7 +33,10 @@
       </div>
     </div>
     <div class="savers">
-      <button type="button" ng-click="saveSettigns()">Változások mentése</button>
+      <div style="color: red;" ng-show="saveprogress">
+        Változások mentése folyamatban...
+      </div>
+      <button type="button" ng-show="!saveprogress" ng-click="saveSettigns()">Változások mentése</button>
     </div>
   </div>
 </div>

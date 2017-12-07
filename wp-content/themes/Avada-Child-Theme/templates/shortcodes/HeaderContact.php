@@ -1,4 +1,4 @@
-<div class="address">
+<div class="address" style="display: none;">
   <i class="fa fa-map-marker"></i> <?php echo get_option('address'); ?>
 </div>
 <div class="phone">

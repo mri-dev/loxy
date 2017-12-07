@@ -55,6 +55,7 @@ szinvalaszto.controller('Konfigurator', ['$scope', '$http', function($scope, $ht
   $scope.settings.groups = {};
   $scope.settings_group = [];
   $scope.loaded = false;
+  $scope.saveprogress = false;
 
   $scope.init = function(){
     $scope.prepareDefaultSettings();
@@ -91,6 +92,7 @@ szinvalaszto.controller('Konfigurator', ['$scope', '$http', function($scope, $ht
   }
 
   $scope.saveSettigns = function(){
+    $scope.saveprogress = true;
     $http({
 			method: 'POST',
 			url: '/wp-admin/admin-ajax.php?action=szinvalaszto',
@@ -100,6 +102,7 @@ szinvalaszto.controller('Konfigurator', ['$scope', '$http', function($scope, $ht
         settings: angular.toJson($scope.settings)
 			})
 		}).then(function successCallback(r) {
+      $scope.saveprogress = false;
       console.log(r);
     }, function errorCallback(r) {
     });

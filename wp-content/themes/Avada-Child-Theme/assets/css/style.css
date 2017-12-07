@@ -676,22 +676,104 @@ body.home .fusion-header-menu-align-center .fusion-main-menu {
     right: -15px;
     top: -5px;
   }
+
+  /* line 598, sass/style.scss */
+  .own-testimonials .testimonial {
+    margin: 40px 0!important;
+  }
+
+  /* line 601, sass/style.scss */
+  #main {
+    padding: 30px 10px 10px 10px !important;
+  }
+
+  /* line 604, sass/style.scss */
+  .kutyafajtak-grid-holder > .item {
+    flex-basis: calc(100%/2);
+  }
+
+  /* line 607, sass/style.scss */
+  .strong-content.strong-grid.columns-2 .testimonial {
+    width: 50%;
+  }
+
+  /* line 610, sass/style.scss */
+  .own-testimonials {
+    margin: 0 !important;
+  }
+
+  /* line 613, sass/style.scss */
+  .contact-form-holder .requester-holder {
+    width: 100% !important;
+  }
+
+  /* line 616, sass/style.scss */
+  .flip-gallery {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+  }
+  /* line 623, sass/style.scss */
+  .flip-gallery > div {
+    flex-basis: calc(100%/2);
+    float: none;
+    width: auto;
+  }
+
+  /* line 629, sass/style.scss */
+  .contact-form-holder .btns #mail-msg {
+    width: 100% !important;
+  }
 }
 @media screen and (max-width: 768px) {
-  /* line 601, sass/style.scss */
+  /* line 635, sass/style.scss */
   .header-contact-holder {
     flex-wrap: wrap;
   }
-  /* line 603, sass/style.scss */
+  /* line 637, sass/style.scss */
   .header-contact-holder > div {
     padding: 5px 0;
     text-align: center;
     flex-basis: 100%;
-    font-size: 0.8em;
+    font-size: 1.2em;
   }
 
-  /* line 610, sass/style.scss */
+  /* line 644, sass/style.scss */
   .fusion-icon-bars:before {
     font-size: 28px;
+  }
+
+  /* line 647, sass/style.scss */
+  .color-selection .group_selection {
+    margin: 0 -10px;
+  }
+
+  /* line 650, sass/style.scss */
+  .color-selection .group_selection .cwrapper {
+    height: 80px;
+  }
+
+  /* line 653, sass/style.scss */
+  .color-selection .group_selection .cwrapper .name {
+    font-size: 0.7em;
+  }
+
+  /* line 656, sass/style.scss */
+  .color-selection .group_selection > div {
+    flex-basis: calc(100%/3);
+    padding: 10px;
+  }
+}
+@media screen and (max-width: 480px) {
+  /* line 663, sass/style.scss */
+  .strong-content.strong-grid.columns-2 .testimonial {
+    width: 100%;
+  }
+
+  /* line 667, sass/style.scss */
+  .flip-gallery > div {
+    flex-basis: calc(100%/1);
   }
 }
